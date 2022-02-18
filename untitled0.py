@@ -8,7 +8,7 @@ Created on Sat Jan 22 20:23:32 2022
 import pandas as pd
 import numpy as np
 # import sklearn as sk
-from sklearn.linear_model import LinearRegression
+# from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
@@ -105,6 +105,7 @@ data.fillna(data.mean(), inplace=True)
 data.RainToday = [1 if each == 'Yes' else 0 for each in data.RainToday]
 data.RainTomorrow = [1 if each == 'Yes' else 0 for each in data.RainTomorrow]
 # data.sample(3)
+data.to_excel("sample.xlsx")
 # the output or the label.
 # Y = data['PrecipitationSumInches']
 # # reshaping it into a 2-D vector
